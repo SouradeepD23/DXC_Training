@@ -1,0 +1,60 @@
+
+QUESTION 1:
+----------------
+
+class RevString {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter string:");
+		String s=sc.nextLine();
+		String rev="";
+		int i, vowels=0, consonants=0;
+		char ch;
+		for(i=s.length()-1; i>=0; i++)
+		{	
+			ch=s.charAt(i);
+			rev+=ch;
+			if(ch>=65 && ch<=90)
+				ch=ch+32;
+			
+			if(ch>=97 && ch<=122){
+			if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+				vowels++;
+			else
+				consonants++;
+			}
+		}
+		System.out.println(rev+", the given string contains "+ vowels + " vowels and " + consonants + " consonants");
+	}
+}
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+QUESTION 2:
+------------
+
+
+class Digits {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number:");
+		int n = sc.nextInt();
+		int count=0;
+		while(n>0){
+			count++;
+			n=n%10;
+		}
+		System.out.println("The given number contains "+count+" digits");
+	}
+}
