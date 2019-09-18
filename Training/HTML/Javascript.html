@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+      function numOnly(e) {
+        //alert('hello  //document.getElementById('txtmob').value="helloJS";
+        //var x = document.getElementById('txtmob').value;
+        //alert(e.which);  //which attribute tells which event was triggered
+        if(!(e.which>=48 && e.which<=57)){
+          e.preventDefault();  //prevents default function of event triggered
+        }
+      }
+
+      function dobValidate() {
+        var date = new Date();
+        //var year = date.getYear();
+        var year = date.getFullYear();
+        //alert(year);
+
+        //var month = date.getMonth();
+        var month = date.getMonth()+1;
+        //alert(month);
+
+        var dd = date.getDate();
+        //alert(dd);
+
+        if(month<10){
+          month="0"+month; //OR month=0+""+month;
+        }
+        if(dd<10){
+          dd="0"+dd; //OR dd=0+""+dd;
+        }
+        
+        document.getElementById('dob').max=year+"-"+month+"-"+dd;
+      }
+    </script>
+  </head>
+
+
+  <body>
+    <input type="text" onkeypress="numOnly(event)" id="txtmob" maxlength="10" placeholder="Enter number">
+    <input type="submit" name="" value="submit">
+
+    <input type="date" id="dob" onclick="dobValidate()">
+  </body>
+</html>

@@ -1,0 +1,31 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+
+input {
+  background-color: rgba(0,0,0, 0.1);
+}
+
+
+.bg {
+
+  background-image: url("water.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blue-box {
+  background-color: #0000ff; width: 200px; height: 200px;
+}
+
+.blue-box:hover {
+  cursor: pointer;
+}
