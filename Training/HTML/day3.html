@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Arrays</title>
+
+    <script type="text/javascript">
+
+      var type=['animal','lang','fruit'];
+      var data=[['cat','dog','tiger'],['c','java','python'],['apple','mango','orange']];
+
+
+
+
+      function fillType() {
+
+        for(i=0; i<type.length; i++){
+          var typeDD=document.getElementById('typeDD');
+          var ele=document.createElement('option');
+          ele.text=type[i];
+          typeDD.add(ele, i+1);
+          //dd.option.add(ele, i);
+          //console.log(typeDD[i]);
+        }
+      }
+
+      function fillData(){
+        var typeDD=document.getElementById('typeDD');
+        var selectedidx=typeDD.selectedIndex;
+        var dataDD=document.getElementById('dataDD');
+        dataDD.length=1;
+
+        for(i=0; i<data[selectedidx-1].length; i++){
+
+          var ele=document.createElement('option');
+          ele.text=data[selectedidx-1][i];
+          dataDD.add(ele, i+1);
+        }
+      }
+
+    </script>
+
+  </head>
+  <body onload="fillType()">
+    <select class="" name="" id="typeDD" onchange="fillData()">
+      <option value="">Select Type</option>
+    </select>
+    <select class="" name="" id="dataDD">
+      <option value="">Select Data</option>
+    </select>
+  </body>
+</html>

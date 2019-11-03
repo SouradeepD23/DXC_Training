@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+
+count=(function likeCounter()
+{
+var likeCount=0;
+return function(){
+return ++likeCount;
+}
+})();
+
+function othrFun()
+{
+likeCount=10;
+}
+
+
+</script>
+
+</head>
+
+<body>
+<input type="submit" onclick=
+"alert(count())" value="like">
+
+<input type="submit" onclick="othrFun()" value="other">
+
+
+</body>
+</html>

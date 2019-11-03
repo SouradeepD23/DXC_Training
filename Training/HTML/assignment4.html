@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <style media="screen">
+      img {
+        width: 300px;
+        height: 300px;
+      }
+
+    </style>
+
+    <script type="text/javascript">
+      $(function(){
+        $("#login").click(function(){
+          var pass=$("#pass").val();
+          //console.log(pass);
+          var pattern= /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+
+          if(!pass.match(pattern)){
+            alert("Invalid Password");
+          }
+          else {
+            alert("Valid Password");
+          }
+        })
+      })
+    </script>
+
+  </head>
+
+  <body>
+    <div class="container text-center">
+
+      <div class="img">
+        <img src="Images/img4.jpeg" alt="Sun" class="img-circle">
+      </div>
+
+      <br>
+      <br>
+
+      <div>
+
+          <fieldset>
+            <legend>Login</legend>
+            <input type="text" placeholder="Username" id="user">
+            <br>
+            <input type="password" placeholder="Password" id="pass" pattern="">
+            <br>
+            <input type="submit" name="" value="Login" id="login">
+          </fieldset>
+
+      </div>
+
+    </div>
+  </body>
+</html>
